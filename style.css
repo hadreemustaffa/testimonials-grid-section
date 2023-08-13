@@ -229,7 +229,7 @@ main {
 }
 
 .shadow {
-	box-shadow: 10px 20px 40px -20px var(--clr-primary-700);
+	box-shadow: 10px 20px 40px -20px var(--clr-primary-500);
 }
 
 .quotation {
