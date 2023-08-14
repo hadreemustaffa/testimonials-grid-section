@@ -273,6 +273,7 @@ main {
 
 	main {
 		min-width: 0;
+		max-width: 750px;
 		grid-template-rows: repeat(4, 1fr);
 	}
 	.card:first-child {
