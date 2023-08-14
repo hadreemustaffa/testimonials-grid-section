@@ -4,8 +4,8 @@
 	/* Font variables */
 	--ff-primary: 'Barlow Semi Condensed', sans-serif;
 
-	--fs-lg: 1.313rem;
-	--fs-sm: 0.875rem;
+	--fs-lg: 1.25rem;
+	--fs-sm: 0.813rem;
 
 	--fw-semibold: 600;
 	--fw-regular: 500;
@@ -167,6 +167,8 @@ svg {
 /* General styling */
 
 body {
+	min-height: 100vh;
+	height: auto;
 	display: grid;
 	place-content: center;
 	background-color: var(--clr-neutral-100);
@@ -181,22 +183,22 @@ h1 {
 	font-size: var(--fs-heading);
 	color: var(--clr-primary-100);
 	font-weight: var(--fw-semibold);
+	line-height: 1.25;
 }
 
 main {
 	background-color: var(--clr-neutral-100);
-	width: 80%;
-	min-width: 1120px;
-	max-width: 1340px;
+	width: 80vw;
+	max-width: 1152px;
 	margin: 5em auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr 1fr;
-	gap: 1.5em;
+	gap: 2em;
 }
 
 .card {
-	padding: 2em 2.5em;
+	padding: 2em;
 	border-radius: 10px;
 	z-index: 0;
 }
@@ -216,11 +218,11 @@ main {
 .customer-detail {
 	display: flex;
 	gap: 1.5em;
-	padding-bottom: 1.25em;
+	padding-bottom: 1em;
 }
 .customer-detail > img {
-	width: 56px;
-	height: 56px;
+	width: 35px;
+	height: 35px;
 	border-radius: 50%;
 	margin: auto 0;
 }
@@ -233,7 +235,7 @@ main {
 .text-container {
 	display: flex;
 	flex-direction: column;
-	gap: 1.25em;
+	gap: 1em;
 }
 
 .shadow {
@@ -241,7 +243,7 @@ main {
 }
 
 .quotation {
-	width: 140px;
+	width: 125px;
 	height: 125px;
 	position: absolute;
 	top: 0;
@@ -249,14 +251,11 @@ main {
 	z-index: -1;
 }
 
-@media screen and (max-width: 599px) {
-	body {
-		height: auto;
-	}
-
+@media screen and (max-width: 899px) {
 	main {
 		width: 90vw;
 		min-width: 0;
+		max-width: 500px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -266,11 +265,7 @@ main {
 	}
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-	body {
-		height: auto;
-	}
-
+@media screen and (min-width: 900px) and (max-width: 1200px) {
 	main {
 		min-width: 0;
 		max-width: 750px;
@@ -293,5 +288,16 @@ main {
 
 	.card:last-child {
 		grid-area: 4 / 1 / 4 / 5;
+	}
+}
+
+@media screen and (min-width: 2100px) {
+	:root {
+		--fs-lg: 1.625rem;
+		--fs-sm: 1.25rem;
+	}
+
+	main {
+		max-width: 1500px;
 	}
 }
